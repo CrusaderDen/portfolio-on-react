@@ -8,8 +8,8 @@ import {Skills} from "./layuot/sections/skills/Skills";
 function App() {
     return (
         <div className="App">
-            {/*<Header/>*/}
-            {/*<Main/>*/}
+            <Header/>
+            <Main/>
             <Skills/>
         </div>
     );
