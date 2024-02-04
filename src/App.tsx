@@ -1,28 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import sprite from "./assets/images/sprite.svg";
+import {Header} from "./layuot/header/Header";
+import {Main} from "./layuot/sections/main/Main";
+import {Skills} from "./layuot/sections/skills/Skills";
 
 
 function App() {
     return (
         <div className="App">
-            <Title>Welcome to IT-INCUBATOR</Title>
-            <h2>Начинаем верстать</h2>
-            <svg>
-                <use xlinkHref={`${sprite}#js`}/>
-            </svg>
-            <svg>
-                <use xlinkHref={`${sprite}#ts`}/>
-            </svg>
-            <svg>
-                <use xlinkHref={sprite + '#react'}/>
-            </svg>
-            <svg>
-                <use xlinkHref={sprite + '#r-native'}/>
-            </svg>
-            <svg>
-                <use xlinkHref={sprite + '#styled'}/>
-            </svg>
+            <Header/>
+            <Main/>
+            <Skills/>
         </div>
     );
 }
