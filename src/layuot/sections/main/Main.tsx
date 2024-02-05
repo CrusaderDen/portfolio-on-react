@@ -1,5 +1,5 @@
 import React from 'react';
-import mainPhoto from './../../../assets/images/main-photo.webp'
+import mainPhoto from './../../../assets/images/main-photo.webp';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 
@@ -8,10 +8,10 @@ export const Main = () => {
         <StyledMain>
             <FlexWrapper justify={'space-evenly'}>
                 <div>
-                    <span>Welcome </span>
-                    <h2>I’m Denis Krestov</h2>
-                    <h1>frontend developer</h1>
-                    <button>Download CV</button>
+                    <StyledSpan>Welcome </StyledSpan>
+                    <Name>I’m Denis Krestov</Name>
+                    <MainTitle>frontend developer</MainTitle>
+                    <ButtonCV>Download CV</ButtonCV>
                 </div>
                 <StyledPhoto src={mainPhoto} alt=""/>
             </FlexWrapper>
@@ -20,7 +20,7 @@ export const Main = () => {
 };
 
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
     min-height: 70vh;
     background-color: beige;
 `
@@ -28,7 +28,7 @@ const StyledMain = styled.div`
 
 const StyledPhoto = styled.img`
     width: 566px;
-    h780;
+    height: 780px;
     position: relative;
     top: -160px;
 `
@@ -38,3 +38,4 @@ const Name = styled.h2`
 `
 const StyledSpan = styled.span`
 `
+const ButtonCV = styled.button``
