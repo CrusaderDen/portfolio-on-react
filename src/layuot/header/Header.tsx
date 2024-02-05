@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 import {Menu} from "../../components/menu/Menu";
+import {Container} from "../../components/Container";
+import {FlexWrapper} from "../../components/FlexWrapper";
 
 
 const navMenu = ['Home', 'Portfolio', 'Contact']
@@ -8,16 +10,17 @@ const navMenu = ['Home', 'Portfolio', 'Contact']
 export const Header = () => {
     return (
         <StyledHeader>
-            <Menu menuItems={navMenu}/>
+            <Container>
+                <FlexWrapper justify={'center'} align={'flex-end'} height={'100px'}>
+                    <Menu menuItems={navMenu}/>
+                </FlexWrapper>
+            </Container>
         </StyledHeader>
     );
 };
 
 
 const StyledHeader = styled.header`
-    height: 20vh;
     background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-bottom: 100px;
 `
