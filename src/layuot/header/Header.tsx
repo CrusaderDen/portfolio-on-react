@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import {Logo} from "../../components/logo/Logo";
 import {Menu} from "../../components/menu/Menu";
 
 
@@ -9,7 +8,6 @@ const navMenu = ['Home', 'Portfolio', 'Contact']
 export const Header = () => {
     return (
         <StyledHeader>
-            <Logo/>
             <Menu menuItems={navMenu}/>
         </StyledHeader>
     );
@@ -17,8 +15,9 @@ export const Header = () => {
 
 
 const StyledHeader = styled.header`
-    background-color: navajowhite;
+    height: 20vh;
+    background-color: black;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 `
