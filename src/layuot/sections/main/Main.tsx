@@ -29,14 +29,17 @@ const MainContentBlock = styled.div`
 `
 
 const MainWrapper = styled.div`
-    border: 3px solid #5A585E;
+    border: 1px solid white;
     border-radius: 30px;
+    height: 60vh;
+    width: 100%;
+    //box-shadow: 0 0 80px 30px #1a5ded;
+    //background-color: rgba(106, 147, 223, 0.91);
 `
 
 const StyledMain = styled.section`
-    min-height: calc(100dvh - 200px);
+    min-height: calc(100dvh - 150px);
     background-color: black;
-
 `
 
 const StyledPhoto = styled.img`
@@ -49,12 +52,15 @@ const MainTitle = styled.h1`
     font-weight: 300;
     line-height: 30px;
     text-transform: uppercase;
+    margin-bottom: 35px;
 `
 const Name = styled.h2`
     color: white;
     font-size: 67px;
     font-weight: 600;
     line-height: 101px;
+    //text-shadow: 5px 5px 5px #1a5ded;
+
 
 `
 const StyledSpan = styled.span`
@@ -64,4 +70,15 @@ const StyledSpan = styled.span`
     line-height: 38px;
     text-transform: uppercase;
 `
-const ButtonCV = styled.button``
+const ButtonCV = styled.button`
+    font-size: 25px;
+    padding: 17px 47px;
+    border-radius: 10px;
+    background-color: #275afc;
+    transition: all 0.5s;
+
+    &:hover {
+        transform: translateY(-5px);
+        background-color: #4c72ff;
+    }
+`

@@ -11,7 +11,7 @@ export const Works = () => {
     return (
         <WorksStyled>
             <SectionTitle>My Work Experiance</SectionTitle>
-            <FlexWrapper gap={'50px'}>
+            <FlexWrapper gap={'50px'} wrap={'nowrap'}>
                 <Work src={project_card_1} text={'Made a simple card page using HTML 5 and  CSS 3'}
                       targetLink={'https://mail.ru/'}/>
                 <Work src={project_card_2} text={'Made an I.P address tracking website.'}
@@ -19,7 +19,8 @@ export const Works = () => {
                 <Work src={project_card_3} text={'Made a social media manager template using HTML 5, CSS and JS.'}
                       targetLink={'https://mail.ru/'}/>
             </FlexWrapper>
-            <FlexWrapper direction={'column'} gap={'20px'} justify={'center'}>
+
+            <FlexWrapper direction={'column'} gap={'20px'} justify={'center'} align={'center'}>
                 <SectionTitle>Intrested in my Work</SectionTitle>
                 <StyledSpan>Download my cV to know more about me</StyledSpan>
                 <StyledButton>Download CV</StyledButton>
@@ -35,7 +36,7 @@ const WorksStyled = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: darkslategrey;
+    background-color: black;
 `
 
 const StyledSpan = styled.span``

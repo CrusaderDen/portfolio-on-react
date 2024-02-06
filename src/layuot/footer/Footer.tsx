@@ -28,7 +28,7 @@ export const Footer = (props: { SocialIcons: Array<string> }) => {
 
 
 const StyledFooter = styled.footer`
-    background-color: yellow;
+    background-color: black;
 
 `
 const SocialList = styled.ul`

@@ -20,8 +20,10 @@ export const HardSkill = (props: HardSkillPropsType) => {
 const StyledSkill = styled.div`
     display: grid;
     justify-items: center;
+
 `
 
 const SkillTitle = styled.h3`
     text-transform: uppercase;
+    line-height: 3;
 `

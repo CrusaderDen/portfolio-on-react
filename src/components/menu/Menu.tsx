@@ -20,6 +20,22 @@ const StyledMenu = styled.nav`
         display: flex;
         gap: 70px;
 
+
+        li {
+            transition: all 0.5s;
+
+            &:hover {
+                transform: scale(1.3) translateY(-5px);
+                text-shadow: 0 15px 3px #5693ff;
+            }
+
+            a {
+                color: #5693ff;
+                font-size: 20px;
+            }
+
+        }
+
     }
 
 `

@@ -3,24 +3,25 @@ import styled from "styled-components";
 import {Menu} from "../../components/menu/Menu";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
+import {HeaderMenu} from "./headerMenu/HeaderMenu";
 
 
 const navMenu = ['Home', 'Portfolio', 'Contact']
 
 export const Header = () => {
     return (
-        <StyledHeader>
+        <StyledHeaderMenu>
             <Container>
                 <FlexWrapper justify={'center'} align={'flex-end'} height={'100px'}>
-                    <Menu menuItems={navMenu}/>
+                    <HeaderMenu menuItems={navMenu}/>
                 </FlexWrapper>
             </Container>
-        </StyledHeader>
+        </StyledHeaderMenu>
     );
 };
 
 
-const StyledHeader = styled.header`
+const StyledHeaderMenu = styled.header`
     background-color: black;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 `
