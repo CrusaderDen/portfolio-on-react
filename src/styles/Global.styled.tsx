@@ -13,12 +13,12 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         margin: 0;
-        font-family: 'Poppins', 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+        font-family: 'Poppins', sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        color: ${theme.colors.font};
+        color: ${theme.colors.primaryFont};
+        background-color: ${theme.colors.primaryBg};
+        line-height: 1.2;
     }
 
     code {
@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
 
     a {
         text-decoration: none;
-        color: ${theme.colors.font};
+        color: ${theme.colors.primaryFont};
     }
 
     ul {

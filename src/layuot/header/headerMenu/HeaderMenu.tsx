@@ -5,21 +5,19 @@ import styled from "styled-components";
 export const HeaderMenu = (props: { menuItems: Array<string> }) => {
     return (
         <StyledHeaderMenu>
-            <nav>
-                <ul>
-                    {props.menuItems.map((item, index) => <ListItem key={index}>
-                        <Link href="#">
-                            {item}
-                            <Mask>
-                                <span>{item}</span>
-                            </Mask>
-                            <Mask>
-                                <span>{item}</span>
-                            </Mask>
-                        </Link>
-                    </ListItem>)}
-                </ul>
-            </nav>
+            <ul>
+                {props.menuItems.map((item, index) => <ListItem key={index}>
+                    <Link href="#">
+                        {item}
+                        <Mask>
+                            <span>{item}</span>
+                        </Mask>
+                        <Mask>
+                            <span>{item}</span>
+                        </Mask>
+                    </Link>
+                </ListItem>)}
+            </ul>
         </StyledHeaderMenu>
     );
 };
@@ -35,7 +33,7 @@ const Mask = styled.span`
     //outline: 1px solid green;
 
     span {
-        color: white;
+        color: rgb(152, 152, 152);
     }
 
     & + & {
@@ -50,14 +48,37 @@ const Mask = styled.span`
 `
 
 const StyledHeaderMenu = styled.nav`
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    //border-bottom: 1px solid rgb(152, 152, 152);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
     ul {
         display: flex;
         gap: 70px;
     }
+
+    &::before {
+        content: '';
+        width: 90vw;
+        height: 1px;
+        background-color: rgb(152, 152, 152);
+
+        position: absolute;
+        bottom: 0;
+    }
+
 `
 
 const Link = styled.a`
-    font-size: 30px;
+    font-size: 34px;
     transition: all 0.5s;
     color: transparent;
 `

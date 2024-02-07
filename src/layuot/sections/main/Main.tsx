@@ -1,5 +1,5 @@
 import React from 'react';
-import mainPhoto from './../../../assets/images/photo.png';
+import mainPhoto from './../../../assets/images/tempPhoto.jpeg';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
@@ -8,43 +8,53 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <MainWrapper>
-                    <FlexWrapper justify={'space-evenly'} align={'center'}>
-                        <MainContentBlock>
-                            <StyledSpan>Welcome </StyledSpan>
-                            <Name>I’m Denis Krestov</Name>
-                            <MainTitle>frontend developer</MainTitle>
-                            <ButtonCV>Download CV</ButtonCV>
-                        </MainContentBlock>
-                        <StyledPhoto src={mainPhoto} alt="photo"/>
-                    </FlexWrapper>
-                </MainWrapper>
+                <FlexWrapper justify={'space-between'} align={'center'}>
+                    <MainContentBlock>
+                        <StyledSpan>Welcome </StyledSpan>
+                        <Name>I’m Denis Krestov</Name>
+                        <MainTitle>frontend developer</MainTitle>
+                        <ButtonCV>Download CV</ButtonCV>
+                    </MainContentBlock>
+                    <PhotoWrapper>
+                        <StyledPhoto src={mainPhoto} alt={'my photo'}/>
+                    </PhotoWrapper>
+                </FlexWrapper>
             </Container>
         </StyledMain>
     );
 };
 
+const PhotoWrapper = styled.div`
+    position: relative;
+    z-index: 0;
+
+    &::before {
+        content: '';
+
+        width: 596px;
+        height: 658px;
+        background: rgb(90, 108, 108);
+
+        position: absolute;
+        top: -40px;
+        right: -40px;
+
+        z-index: -1;
+    }
+`
+
+
 const MainContentBlock = styled.div`
     max-width: 330px;
 `
 
-const MainWrapper = styled.div`
-    border: 1px solid white;
-    border-radius: 30px;
-    height: 60vh;
-    width: 100%;
-    //box-shadow: 0 0 80px 30px #1a5ded;
-    //background-color: rgba(106, 147, 223, 0.91);
-`
 
 const StyledMain = styled.section`
-    min-height: calc(100dvh - 150px);
-    background-color: black;
+    min-height: 100dvh;
+    display: flex;
 `
 
 const StyledPhoto = styled.img`
-    height: 580px;
-
 `
 const MainTitle = styled.h1`
     color: white;
@@ -74,11 +84,14 @@ const ButtonCV = styled.button`
     font-size: 25px;
     padding: 17px 47px;
     border-radius: 10px;
-    background-color: #275afc;
+    background: linear-gradient(180.00deg, rgb(21, 185, 185), rgb(60, 29, 255) 100%);
     transition: all 0.5s;
+
+    position: relative;
+    left: -2px;
 
     &:hover {
         transform: translateY(-5px);
-        background-color: #4c72ff;
+
     }
 `

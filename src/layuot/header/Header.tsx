@@ -11,17 +11,12 @@ const navMenu = ['Home', 'Portfolio', 'Contact']
 export const Header = () => {
     return (
         <StyledHeaderMenu>
-            <Container>
-                <FlexWrapper justify={'center'} align={'flex-end'} height={'100px'}>
-                    <HeaderMenu menuItems={navMenu}/>
-                </FlexWrapper>
-            </Container>
+            <HeaderMenu menuItems={navMenu}/>
         </StyledHeaderMenu>
     );
 };
 
 
 const StyledHeaderMenu = styled.header`
-    background-color: black;
-    padding-bottom: 50px;
+
 `
