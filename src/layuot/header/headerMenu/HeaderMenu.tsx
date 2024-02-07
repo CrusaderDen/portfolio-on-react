@@ -48,12 +48,15 @@ const Mask = styled.span`
 `
 
 const StyledHeaderMenu = styled.nav`
+    background-color: rgba(31, 31, 31, 0.7);
+
     position: fixed;
     left: 0;
     top: 0;
-    height: 80px;
+    height: 60px;
     width: 100%;
-    //border-bottom: 1px solid rgb(152, 152, 152);
+
+    z-index: 2;
 
     display: flex;
     justify-content: center;
@@ -78,7 +81,7 @@ const StyledHeaderMenu = styled.nav`
 `
 
 const Link = styled.a`
-    font-size: 34px;
+    font-size: 28px;
     transition: all 0.5s;
     color: transparent;
 `

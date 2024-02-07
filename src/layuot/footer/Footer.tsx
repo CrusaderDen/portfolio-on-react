@@ -28,7 +28,20 @@ export const Footer = (props: { SocialIcons: Array<string> }) => {
 
 
 const StyledFooter = styled.footer`
-    background-color: black;
+    height: 55px;
+    position: relative;
+    text-align: center;
+
+    &::after {
+        content: '';
+        width: 90vw;
+        height: 1px;
+        background-color: rgb(152, 152, 152);
+
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+    }
 
 `
 const SocialList = styled.ul`
@@ -36,11 +49,16 @@ const SocialList = styled.ul`
     gap: 30px;
 `
 const SocialItem = styled.li`
-
+    &:hover {
+        transform: scale(1.2);
+    }
 `
 const SocialLink = styled.a`
 
 `
 const Copyright = styled.small`
+    color: rgb(158, 158, 158);
+    font-size: 18px;
+    text-transform: capitalize;
 
 `

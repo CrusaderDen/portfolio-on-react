@@ -20,7 +20,9 @@ export const SoftSkill = (props: SoftSkillPropsType) => {
 };
 
 const SkillTitle = styled.h3`
-
+    font-size: 26px;
+    margin-left: 10px;
+    margin-bottom: 5px;
 `
 
 const SkillBar = styled.div`

@@ -3,6 +3,7 @@ import mainPhoto from './../../../assets/images/tempPhoto.jpeg';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
+import {ButtonCV} from "../../../components/ButtonCV";
 
 export const Main = () => {
     return (
@@ -55,6 +56,7 @@ const StyledMain = styled.section`
 `
 
 const StyledPhoto = styled.img`
+
 `
 const MainTitle = styled.h1`
     color: white;
@@ -80,18 +82,4 @@ const StyledSpan = styled.span`
     line-height: 38px;
     text-transform: uppercase;
 `
-const ButtonCV = styled.button`
-    font-size: 25px;
-    padding: 17px 47px;
-    border-radius: 10px;
-    background: linear-gradient(180.00deg, rgb(21, 185, 185), rgb(60, 29, 255) 100%);
-    transition: all 0.5s;
 
-    position: relative;
-    left: -2px;
-
-    &:hover {
-        transform: translateY(-5px);
-
-    }
-`

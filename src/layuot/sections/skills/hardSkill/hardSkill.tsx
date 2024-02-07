@@ -11,7 +11,7 @@ type HardSkillPropsType = {
 export const HardSkill = (props: HardSkillPropsType) => {
     return (
         <StyledSkill>
-            <Icon iconId={props.iconId}/>
+            <Icon iconId={props.iconId} width={'60'} height={'60'} viewBox={'0 0 100 100'}/>
             <SkillTitle>{props.title}</SkillTitle>
         </StyledSkill>
     );

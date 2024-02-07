@@ -6,30 +6,29 @@ import {HardSkill} from "./hardSkill/hardSkill";
 import {SoftSkill} from "./softSkill/SoftSkill";
 import {Container} from "../../../components/Container";
 
-export const Skills = () => {
+type SkillsPropsType = {
+    hardSkills: { spriteName: string, skillTitle: string }[]
+    softSkills: { skillTitle: string, skillProgress: string }[]
+}
+
+export const Skills = (props: SkillsPropsType) => {
     return (
         <StyledSkills>
             <Container>
                 <SkillWrapper>
                     <SectionTitle>My Hard Skills...</SectionTitle>
                     <FlexWrapper justify={'space-between'}>
-                        <HardSkill iconId={'js'} title={'javascript'}/>
-                        <HardSkill iconId={'ts'} title={'typescript'}/>
-                        <HardSkill iconId={'react'} title={'react'}/>
-                        <HardSkill iconId={'redux'} title={'redux'}/>
-                        <HardSkill iconId={'r-native'} title={'react native'}/>
-                        <HardSkill iconId={'next'} title={'next js'}/>
-                        <HardSkill iconId={'styled'} title={'redux'}/>
-                        <HardSkill iconId={'git'} title={'git'}/>
+                        {props.hardSkills.map((item: { spriteName: string, skillTitle: string }) => <HardSkill
+                            iconId={item.spriteName}
+                            title={item.skillTitle}/>)}
                     </FlexWrapper>
                 </SkillWrapper>
                 <SkillWrapper>
                     <SectionTitle>... And Soft Skills</SectionTitle>
-                    <FlexWrapper direction={'column'}>
-                        <SoftSkill title={'friendliness'} progress={'80%'}/>
-                        <SoftSkill title={'sense of humor'} progress={'70%'}/>
-                        <SoftSkill title={'persistence'} progress={'90%'}/>
-                        <SoftSkill title={'analytical skills'} progress={'85%'}/>
+                    <FlexWrapper direction={'column'} gap={'25px'}>
+                        {props.softSkills.map((item: { skillTitle: string, skillProgress: string }) => <SoftSkill
+                            title={item.skillTitle}
+                            progress={item.skillProgress}/>)}
                     </FlexWrapper>
                 </SkillWrapper>
             </Container>
@@ -38,8 +37,11 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-    background-color: #000;
     padding-bottom: 50px;
+
+    ${SectionTitle} {
+        margin-left: 50px;
+    }
 
 `
 const SkillWrapper = styled.div`
