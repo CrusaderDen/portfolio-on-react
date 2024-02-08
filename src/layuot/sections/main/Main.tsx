@@ -7,14 +7,14 @@ import {ButtonCV} from "../../../components/ButtonCV";
 
 export const Main = () => {
     return (
-        <StyledMain>
+        <StyledMain id={'section0'}>
             <Container>
                 <FlexWrapper justify={'space-between'} align={'center'}>
                     <MainContentBlock>
                         <StyledSpan>Welcome </StyledSpan>
                         <Name>I’m Denis Krestov</Name>
                         <MainTitle>frontend developer</MainTitle>
-                        <ButtonCV>Download CV</ButtonCV>
+                        <ButtonCV onClick={() => alert('Пока нет CV, сорян :)')}>Download CV</ButtonCV>
                     </MainContentBlock>
                     <PhotoWrapper>
                         <StyledPhoto src={mainPhoto} alt={'my photo'}/>

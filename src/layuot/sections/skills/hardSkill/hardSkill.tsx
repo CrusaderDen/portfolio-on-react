@@ -18,12 +18,22 @@ export const HardSkill = (props: HardSkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
 `
 
 const SkillTitle = styled.h3`
     text-transform: uppercase;
     line-height: 3;
+    max-width: 150px;
+
+    font-size: 18px;
+    text-align: center;
+
+    line-height: 1.2;
+    padding-top: 15px;
+
 `

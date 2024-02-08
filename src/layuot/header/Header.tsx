@@ -6,7 +6,7 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
 
 
-const navMenu = ['Home', 'Portfolio', 'Contact']
+const navMenu = ['Home', 'Skills', 'Portfolio']
 
 export const Header = () => {
     return (

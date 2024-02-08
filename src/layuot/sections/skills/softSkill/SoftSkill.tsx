@@ -26,7 +26,7 @@ const SkillTitle = styled.h3`
 `
 
 const SkillBar = styled.div`
-    max-width: 900px;
+    width: 100%;
     height: 18px;
     border-radius: 9px;
     background-color: rgb(22, 41, 80);

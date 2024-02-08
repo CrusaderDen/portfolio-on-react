@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {log} from "node:util";
 
 
 export const HeaderMenu = (props: { menuItems: Array<string> }) => {
@@ -7,7 +8,7 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
         <StyledHeaderMenu>
             <ul>
                 {props.menuItems.map((item, index) => <ListItem key={index}>
-                    <Link href="#">
+                    <Link href={`#section${index}`}>
                         {item}
                         <Mask>
                             <span>{item}</span>

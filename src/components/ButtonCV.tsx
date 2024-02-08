@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const ButtonCV = styled.button`
     font-size: 25px;
     padding: 17px 47px;

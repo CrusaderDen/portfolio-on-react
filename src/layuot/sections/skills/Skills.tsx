@@ -13,7 +13,7 @@ type SkillsPropsType = {
 
 export const Skills = (props: SkillsPropsType) => {
     return (
-        <StyledSkills>
+        <StyledSkills id={'section1'}>
             <Container>
                 <SkillWrapper>
                     <SectionTitle>My Hard Skills...</SectionTitle>
