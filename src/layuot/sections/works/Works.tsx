@@ -41,9 +41,17 @@ export const Works = () => {
 
 
 const SliderButtonLeft = styled.div`
+
+    img {
+        width: 30px;
+        height: 24px;
+        display: block;
+    }
+
     position: absolute;
     left: -100px;
     top: 50%;
+    transform: translateY(-50%);
     z-index: 0;
 
 
@@ -71,7 +79,7 @@ const SliderButtonLeft = styled.div`
 const SliderButtonRight = styled(SliderButtonLeft)`
     left: unset;
     right: -100px;
-    transform: rotate(180deg);
+    transform: rotate(180deg) translateY(50%);
 `
 
 
