@@ -6,12 +6,10 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
 
 
-const navMenu = ['Home', 'Skills', 'Portfolio']
-
-export const Header = () => {
+export const Header = (props: { navMenu: Array<string> }) => {
     return (
         <StyledHeaderMenu>
-            <HeaderMenu menuItems={navMenu}/>
+            <HeaderMenu menuItems={props.navMenu}/>
         </StyledHeaderMenu>
     );
 };
