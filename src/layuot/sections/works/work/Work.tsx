@@ -14,7 +14,7 @@ export const Work = (props: WorkPropsType) => {
         <StyledWork>
             <Image src={props.src} alt="picture"/>
             <Text>{props.text}</Text>
-            <Link href={props.targetLink}>Learn More &#8594;</Link>
+            <Link href={props.targetLink} target={'_about'}>Learn More &#8594;</Link>
         </StyledWork>
     );
 };

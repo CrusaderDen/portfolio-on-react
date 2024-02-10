@@ -120,6 +120,9 @@ import {SectionTitle} from "../../../components/SectonTitle";
 import project_card_1 from './../../../assets/images/project-card-1.webp'
 import project_card_2 from './../../../assets/images/project-card-2.webp'
 import project_card_3 from './../../../assets/images/project-card-3.webp'
+import project_card_4 from './../../../assets/images/project-card-4.webp'
+import project_card_5 from './../../../assets/images/project-card-5.webp'
+import project_card_6 from './../../../assets/images/project-card-6.webp'
 import styled from "styled-components";
 import {ButtonCV} from "../../../components/ButtonCV";
 import arrowLeft from './../../../assets/images/arrow_left.svg'
@@ -140,16 +143,19 @@ const responsive = {
 
 
 const items = [
-    <Work src={project_card_1} text={'Made a simple card page using HTML 5 and  CSS 3'}
-          targetLink={'https://mail.ru/'}/>,
-    <Work src={project_card_2} text={'Made an I.P address tracking website.'} targetLink={'https://mail.ru/'}/>,
-    <Work src={project_card_3} text={'Made a social media manager template using HTML 5, CSS and JS.'}
-          targetLink={'https://mail.ru/'}/>,
-    <Work src={project_card_1} text={'Made a simple card page using HTML 5 and  CSS 3'}
-          targetLink={'https://mail.ru/'}/>,
-    <Work src={project_card_2} text={'Made an I.P address tracking website.'} targetLink={'https://mail.ru/'}/>,
-    <Work src={project_card_3} text={'Made a social media manager template using HTML 5, CSS and JS.'}
-          targetLink={'https://mail.ru/'}/>,
+    <Work src={project_card_1} text={'Made a landing page about cakes. Using HTML 5, CSS 3 and some JS.'}
+          targetLink={'https://sweet37.ru/'}/>,
+    <Work src={project_card_2} text={'Made a landing page with adaptive layout. '}
+          targetLink={'https://cyberpunk.ivrupo.ru/'}/>,
+    <Work src={project_card_3} text={'Made an adaptive social media template using HTML 5, CSS.'}
+          targetLink={'https://castaway.ivrupo.ru/'}/>,
+    <Work src={project_card_4}
+          text={"Made a residential district's landing page with HTML 5 and intresting CSS 3 effects."}
+          targetLink={'https://crusaderden.github.io/Landing_Loft-House/'}/>,
+    <Work src={project_card_5} text={'Balloon tours adaptive landinng page'}
+          targetLink={'https://balloons.ivrupo.ru/'}/>,
+    <Work src={project_card_6} text={'Bank application on vanilla JS'}
+          targetLink={'https://bank.ivrupo.ru/'}/>,
 ]
 
 const Gallery = () => {
