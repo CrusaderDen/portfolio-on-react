@@ -22,6 +22,7 @@ export const Work = (props: WorkPropsType) => {
 const StyledWork = styled.div`
     background-color: red;
     max-width: 372px;
+    min-height: 465px;
     width: 100%;
     display: grid;
     justify-items: center;

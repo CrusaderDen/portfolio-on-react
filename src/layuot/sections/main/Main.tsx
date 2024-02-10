@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import {ButtonCV} from "../../../components/ButtonCV";
+import Typewriter from 'typewriter-effect';
 
 export const Main = () => {
     return (
@@ -13,7 +14,17 @@ export const Main = () => {
                     <MainContentBlock>
                         <StyledSpan>Welcome </StyledSpan>
                         <Name>I’m Denis Krestov</Name>
-                        <MainTitle>frontend developer</MainTitle>
+                        <MainTitle>
+                            <p>frontend developer</p>
+                            <Typewriter
+                                options={{
+                                    strings: ['frontend developer', 'with a great desire to work'],
+                                    autoStart: true,
+                                    loop: true,
+                                    delay: 50
+                                }}
+                            />
+                        </MainTitle>
                         <ButtonCV onClick={() => alert('Пока нет CV, сорян :)')}>Download CV</ButtonCV>
                     </MainContentBlock>
                     <PhotoWrapper>
@@ -65,6 +76,10 @@ const MainTitle = styled.h1`
     line-height: 30px;
     text-transform: uppercase;
     margin-bottom: 35px;
+
+    p {
+        display: none;
+    }
 `
 const Name = styled.h2`
     color: white;
