@@ -5,21 +5,28 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 
 
 export const Footer = (props: any) => {
+
     return (
         <StyledFooter>
             <FlexWrapper justify={'space-evenly'} align={'center'}>
                 <Copyright>{props.content.copyright}</Copyright>
                 <SocialList>
-                    {props.content.socialIcons.map((item: string, index: React.Key | null | undefined) => {
-                            return (
-                                <SocialItem key={index}>
-                                    <SocialLink>
-                                        <Icon iconId={item} width={'17px'} height={'17px'} viewBox={'0 0 17px 17px'}/>
-                                    </SocialLink>
-                                </SocialItem>
-                            )
-                        }
-                    )}
+                    <SocialItem>
+                        <SocialLink href={props.content.socialLinks.telegramLink} target={'_blank'}>
+                            <Icon iconId={'telegram'} width={'17px'} height={'17px'} viewBox={'0 0 17px 17px'}/>
+                        </SocialLink>
+                    </SocialItem>
+                    <SocialItem>
+                        <SocialLink href={props.content.socialLinks.vkontacteLink} target={'_blank'}>
+                            <Icon iconId={'vk'} width={'17px'} height={'14px'} viewBox={'0 0 17px 17px'}/>
+                        </SocialLink>
+                    </SocialItem>
+                    <SocialItem>
+                        <SocialLink href={props.content.socialLinks.linkedInLink}>
+                            <Icon iconId={'linkedIn'} width={'17px'} height={'17px'} viewBox={'0 0 17px 17px'}/>
+                        </SocialLink>
+                    </SocialItem>
+
                 </SocialList>
             </FlexWrapper>
         </StyledFooter>

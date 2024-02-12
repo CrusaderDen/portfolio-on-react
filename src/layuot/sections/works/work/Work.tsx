@@ -2,19 +2,13 @@ import React from 'react';
 import styled from "styled-components";
 
 
-type WorkPropsType = {
-    src: string
-    text: string
-    targetLink: string
-}
-
-export const Work = (props: WorkPropsType) => {
+export const Work = (props: any) => {
     return (
         <StyledWork>
             <Image src={props.src} alt="picture"/>
             <Wrapper>
                 <Text>{props.text}</Text>
-                <Link href={props.targetLink} target={'_about'}>Learn More &#8594;</Link>
+                <Link href={props.targetLink} target={'_about'}>{props.buttonContent}&#8594;</Link>
             </Wrapper>
         </StyledWork>
     );

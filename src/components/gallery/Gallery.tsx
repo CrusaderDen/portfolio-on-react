@@ -26,18 +26,19 @@ const responsive = {
 export const Gallery = (props: any) => {
     const items = [
         <Work src={project_card_1} text={props.content.card_1_Content}
-              targetLink={'https://sweet37.ru/'}/>,
+              targetLink={'https://sweet37.ru/'} buttonContent={props.content.buttonCard_Content}/>,
         <Work src={project_card_2} text={props.content.card_2_Content}
-              targetLink={'https://cyberpunk.ivrupo.ru/'}/>,
+              targetLink={'https://cyberpunk.ivrupo.ru/'} buttonContent={props.content.buttonCard_Content}/>,
         <Work src={project_card_3} text={props.content.card_3_Content}
-              targetLink={'https://castaway.ivrupo.ru/'}/>,
+              targetLink={'https://castaway.ivrupo.ru/'} buttonContent={props.content.buttonCard_Content}/>,
         <Work src={project_card_4}
               text={props.content.card_4_Content}
-              targetLink={'https://crusaderden.github.io/Landing_Loft-House/'}/>,
+              targetLink={'https://crusaderden.github.io/Landing_Loft-House/'}
+              buttonContent={props.content.buttonCard_Content}/>,
         <Work src={project_card_5} text={props.content.card_5_Content}
-              targetLink={'https://balloons.ivrupo.ru/'}/>,
+              targetLink={'https://balloons.ivrupo.ru/'} buttonContent={props.content.buttonCard_Content}/>,
         <Work src={project_card_6} text={props.content.card_6_Content}
-              targetLink={'https://bank.ivrupo.ru/'}/>,
+              targetLink={'https://bank.ivrupo.ru/'} buttonContent={props.content.buttonCard_Content}/>,
     ]
     return (
         <AliceCarousel

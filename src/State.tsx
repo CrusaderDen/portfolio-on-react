@@ -38,6 +38,7 @@ export let state = {
             sectionTitle_2: 'Interested in my Work',
             styledSpanContent: 'Download my CV to know more about me',
             buttonCV_Content: 'Download CV',
+            buttonCard_Content: 'Learn More ',
             card_1_Content: 'Made a landing page about cakes. Using HTML 5, CSS 3 and some JS.',
             card_2_Content: 'Made a landing page with adaptive layout.',
             card_3_Content: 'Made an adaptive social media template using HTML 5, CSS.',
@@ -48,7 +49,11 @@ export let state = {
         footer: {
             copyright: 'Made By Denis Krestov - Copyright 2024',
             socialIcons: ['telegram', 'vk', 'linkedIn'],
-            socialLinks: ['', '', ''],
+            socialLinks: {
+                telegramLink: 'https://t.me/crusaderDen',
+                vkontacteLink: 'https://vk.com/skalakrestov',
+                linkedInLink: '#!',
+            }
         },
     },
     ru: {
@@ -85,6 +90,7 @@ export let state = {
             sectionTitle_2: 'Заинтересовались?',
             styledSpanContent: 'Загрузите CV, что бы узнать обо мне больше',
             buttonCV_Content: 'Загрузить CV',
+            buttonCard_Content: 'Посмотреть ',
             card_1_Content: 'Лендинг "Тортики на заказ". HTML 5, CSS 3 и немного JS. ',
             card_2_Content: 'Лендинг "Cyberpunk" с адаптивом.',
             card_3_Content: 'Адаптивный лендинг на тему аудио подкастов. HTML 5, CSS 3.',
@@ -95,7 +101,11 @@ export let state = {
         footer: {
             copyright: 'Разработчик Крестов Денис - Copyright 2024',
             socialIcons: ['telegram', 'vk', 'linkedIn'],
-            socialLinks: ['', '', ''],
+            socialLinks: {
+                telegramLink: 'https://t.me/crusaderDen',
+                vkontacteLink: 'https://vk.com/skalakrestov',
+                linkedInLink: '#!',
+            }
         },
     }
 }
