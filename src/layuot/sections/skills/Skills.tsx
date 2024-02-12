@@ -6,17 +6,17 @@ import {HardSkill} from "./hardSkill/hardSkill";
 import {SoftSkill} from "./softSkill/SoftSkill";
 import {Container} from "../../../components/Container";
 
-type SkillsPropsType = {
-    hardSkills: { spriteName: string, skillTitle: string }[]
-    softSkills: { skillTitle: string, skillProgress: string }[]
-}
+// type SkillsPropsType = {
+//     hardSkills: { spriteName: string, skillTitle: string }[]
+//     softSkills: { skillTitle: string, skillProgress: string }[]
+// }
 
-export const Skills = (props: SkillsPropsType) => {
+export const Skills = (props: any) => {
     return (
         <StyledSkills id={'section1'}>
             <Container>
                 <SkillWrapper>
-                    <SectionTitle>My Hard Skills...</SectionTitle>
+                    <SectionTitle>{props.content.myHardSkills}</SectionTitle>
                     <FlexWrapper justify={'space-between'}>
                         {props.hardSkills.map((item: { spriteName: string, skillTitle: string }) => <HardSkill
                             iconId={item.spriteName}
@@ -24,7 +24,7 @@ export const Skills = (props: SkillsPropsType) => {
                     </FlexWrapper>
                 </SkillWrapper>
                 <SkillWrapper>
-                    <SectionTitle>... And Soft Skills</SectionTitle>
+                    <SectionTitle>{props.content.mySoftSkills}</SectionTitle>
                     <FlexWrapper direction={'column'} gap={'25px'}>
                         {props.softSkills.map((item: { skillTitle: string, skillProgress: string }) => <SoftSkill
                             title={item.skillTitle}

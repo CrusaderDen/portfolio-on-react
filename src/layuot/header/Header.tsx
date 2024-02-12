@@ -3,10 +3,10 @@ import styled from "styled-components";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
 
 
-export const Header = (props: { navMenu: Array<string> }) => {
+export const Header = (props: any) => {
     return (
         <StyledHeaderMenu>
-            <HeaderMenu menuItems={props.navMenu}/>
+            <HeaderMenu menuItems={props.navMenu} ru={props.ru} en={props.en}/>
         </StyledHeaderMenu>
     );
 };
@@ -15,3 +15,4 @@ export const Header = (props: { navMenu: Array<string> }) => {
 const StyledHeaderMenu = styled.header`
 
 `
+

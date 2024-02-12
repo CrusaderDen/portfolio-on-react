@@ -179,10 +179,10 @@ const Gallery = () => {
 }
 
 
-export const Works = () => {
+export const Works = (props: any) => {
     return (
         <WorksStyled id={'section2'}>
-            <SectionTitle>Work Experience</SectionTitle>
+            <SectionTitle>{props.content.workExperience}</SectionTitle>
             <Container>
                 <CardBox>
                     <FlexWrapper justify={'center'}>
@@ -192,9 +192,9 @@ export const Works = () => {
             </Container>
             <ContactBox>
                 <FlexWrapper direction={'column'} justify={'center'} align={'center'}>
-                    <SectionTitle>Intrested in my Work ?</SectionTitle>
-                    <StyledSpan>Download my CV to know more about me</StyledSpan>
-                    <ButtonCV onClick={() => alert('Пока нет CV, сорян :)')}>Download CV</ButtonCV>
+                    <SectionTitle>{props.content.interestedInMyWork}</SectionTitle>
+                    <StyledSpan>{props.content.downLoadCV}</StyledSpan>
+                    <ButtonCV onClick={() => alert('Пока нет CV, сорян :)')}>{props.content.buttonText}</ButtonCV>
                 </FlexWrapper>
             </ContactBox>
 

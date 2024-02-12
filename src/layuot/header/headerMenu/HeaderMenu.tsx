@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 
 
-export const HeaderMenu = (props: { menuItems: Array<string> }) => {
+export const HeaderMenu = (props: { menuItems: Array<string>; ru: (any: any) => void; en: (any: any) => void }) => {
     return (
         <StyledHeaderMenu>
             <ul>
@@ -18,9 +18,14 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
                     </Link>
                 </ListItem>)}
             </ul>
+            <LanguageButtons>
+                <ButtonRU onClick={props.ru}>ru</ButtonRU>
+                <ButtonEn onClick={props.en}>en</ButtonEn>
+            </LanguageButtons>
         </StyledHeaderMenu>
     );
 };
+
 
 const Mask = styled.span`
     position: absolute;
@@ -61,7 +66,6 @@ const StyledHeaderMenu = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
-
 
     ul {
         display: flex;
@@ -124,3 +128,34 @@ const ListItem = styled.li`
 }
 `
 
+const ButtonRU = styled.div`
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: darkorange;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+`
+const ButtonEn = styled.div`
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: darkorange;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+`
+
+const LanguageButtons = styled.div`
+    position: fixed;
+    left: 90%;
+    display: flex;
+    gap: 20px;
+`

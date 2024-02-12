@@ -6,26 +6,26 @@ import {Container} from "../../../components/Container";
 import {ButtonCV} from "../../../components/ButtonCV";
 import Typewriter from 'typewriter-effect';
 
-export const Main = () => {
+export const Main = (props: any) => {
     return (
         <StyledMain id={'section0'}>
             <Container>
                 <FlexWrapper justify={'space-between'} align={'center'}>
                     <MainContentBlock>
-                        <StyledSpan>Welcome </StyledSpan>
-                        <Name>I’m Denis Krestov</Name>
+                        <StyledSpan>{props.content.welcome}</StyledSpan>
+                        <Name>{props.content.name}</Name>
                         <MainTitle>
-                            <p>frontend developer</p>
+                            <p>{props.content.typerText1}</p>
                             <Typewriter
                                 options={{
-                                    strings: ['frontend developer', 'with a great desire to work'],
+                                    strings: [props.content.typerText1, props.content.typerText2],
                                     autoStart: true,
                                     loop: true,
                                     delay: 50
                                 }}
                             />
                         </MainTitle>
-                        <ButtonCV onClick={() => alert('Пока нет CV, сорян :)')}>Download CV</ButtonCV>
+                        <ButtonCV onClick={() => alert('Пока нет CV, сорян :)')}>{props.content.buttonText}</ButtonCV>
                     </MainContentBlock>
                     <PhotoWrapper>
                         <StyledPhoto src={mainPhoto} alt={'my photo'}/>
@@ -57,7 +57,7 @@ const PhotoWrapper = styled.div`
 
 
 const MainContentBlock = styled.div`
-    max-width: 330px;
+    max-width: 400px;
 `
 
 

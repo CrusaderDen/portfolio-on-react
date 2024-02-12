@@ -23,8 +23,10 @@ const StyledWork = styled.div`
     max-width: 372px;
     min-height: 465px;
     width: 100%;
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     //border: 5px solid #127BC3;
     border-width: 5px;
     border-style: solid;
@@ -40,12 +42,13 @@ const Image = styled.img`
 `
 
 const Text = styled.p`
-    padding: 30px 10px;
+    margin: 30px 10px;
 `
 
 const Link = styled.a`
     display: inline-block;
     padding: 14px 16px;
+    height: 56px;
     background: transparent;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 4px;
