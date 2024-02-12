@@ -153,19 +153,17 @@ export let state = {
 
 }
 
-export let currentLang: string = 'ru'
+export let currentLang: string = 'en'
 
 export const callBacks = {
     changeLangToRU() {
         currentLang = 'ru'
         rerenderEntireTree()
-        // alert(currentLang)
     },
 
     changeLangToEN() {
         currentLang = 'en'
         rerenderEntireTree()
-        // alert(currentLang)
     },
 
 }

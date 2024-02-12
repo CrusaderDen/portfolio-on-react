@@ -2,7 +2,28 @@ import React from 'react';
 import styled from "styled-components";
 
 
-export const HeaderMenu = (props: { menuItems: Array<string>; ru: (any: any) => void; en: (any: any) => void }) => {
+export const HeaderMenu = (props: {
+    menuItems: Array<string>;
+    ru: (any: any) => void;
+    en: (any: any) => void;
+}) => {
+    function setRussian(e: any) {
+        // @ts-ignore
+        props.ru()
+        e.preventDefault();
+        e.target.classList.contains("active") ? e.target.classList.remove("active") : e.target.classList.add("active");
+        e.target.previousElementSibling.classList.remove("active");
+
+    }
+
+    function setEnglish(e: any) {
+        // @ts-ignore
+        props.en()
+        e.preventDefault();
+        e.target.classList.contains("active") ? e.target.classList.remove("active") : e.target.classList.add("active");
+        e.target.nextElementSibling.classList.remove("active");
+    }
+
     return (
         <StyledHeaderMenu>
             <ul>
@@ -19,8 +40,8 @@ export const HeaderMenu = (props: { menuItems: Array<string>; ru: (any: any) => 
                 </ListItem>)}
             </ul>
             <LanguageButtons>
-                <ButtonRU onClick={props.ru}>ru</ButtonRU>
-                <ButtonEn onClick={props.en}>en</ButtonEn>
+                <ButtonEn onClick={setEnglish} className={'active'}>en</ButtonEn>
+                <ButtonRU onClick={setRussian}>ru</ButtonRU>
             </LanguageButtons>
         </StyledHeaderMenu>
     );
@@ -35,7 +56,6 @@ const Mask = styled.span`
     height: 50%;
     overflow-y: hidden;
     transition: all 0.5s;
-    //outline: 1px solid green;
 
     span {
         color: rgb(152, 152, 152);
@@ -132,25 +152,45 @@ const ButtonRU = styled.div`
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: darkorange;
+    background-color: #787871;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     color: black;
+    font-weight: 700;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #FF8C00FF;
+    }
+
+    &.active {
+        background-color: #FF8C00FF;
+    }
 `
 const ButtonEn = styled.div`
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: darkorange;
+    background-color: #787871;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     color: black;
+    font-weight: 700;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #FF8C00FF;
+    }
+
+    &.active {
+        background-color: #FF8C00FF;
+    }
 `
 
 const LanguageButtons = styled.div`
