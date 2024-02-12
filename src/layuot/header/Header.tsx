@@ -6,7 +6,7 @@ import {HeaderMenu} from "./headerMenu/HeaderMenu";
 export const Header = (props: any) => {
     return (
         <StyledHeaderMenu>
-            <HeaderMenu menuItems={props.navMenu} ru={props.ru} en={props.en}/>
+            <HeaderMenu menuItems={props.menuItems} ru={props.ru} en={props.en}/>
         </StyledHeaderMenu>
     );
 };

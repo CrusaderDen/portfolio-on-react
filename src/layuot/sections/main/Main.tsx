@@ -12,20 +12,21 @@ export const Main = (props: any) => {
             <Container>
                 <FlexWrapper justify={'space-between'} align={'center'}>
                     <MainContentBlock>
-                        <StyledSpan>{props.content.welcome}</StyledSpan>
-                        <Name>{props.content.name}</Name>
+                        <StyledSpan>{props.content.styledSpanContent}</StyledSpan>
+                        <Name>{props.content.nameContent}</Name>
                         <MainTitle>
-                            <p>{props.content.typerText1}</p>
+                            <p>{props.content.typewriterContent_1}</p>
                             <Typewriter
                                 options={{
-                                    strings: [props.content.typerText1, props.content.typerText2],
+                                    strings: [props.content.typewriterContent_1, props.content.typewriterContent_2],
                                     autoStart: true,
                                     loop: true,
                                     delay: 50
                                 }}
                             />
                         </MainTitle>
-                        <ButtonCV onClick={() => alert('Пока нет CV, сорян :)')}>{props.content.buttonText}</ButtonCV>
+                        <ButtonCV
+                            onClick={() => alert('Пока нет CV, сорян :)')}>{props.content.buttonCV_Content}</ButtonCV>
                     </MainContentBlock>
                     <PhotoWrapper>
                         <StyledPhoto src={mainPhoto} alt={'my photo'}/>

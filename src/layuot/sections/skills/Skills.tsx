@@ -16,19 +16,20 @@ export const Skills = (props: any) => {
         <StyledSkills id={'section1'}>
             <Container>
                 <SkillWrapper>
-                    <SectionTitle>{props.content.myHardSkills}</SectionTitle>
+                    <SectionTitle>{props.content.sectionTitle_hard}</SectionTitle>
                     <FlexWrapper justify={'space-between'}>
-                        {props.hardSkills.map((item: { spriteName: string, skillTitle: string }) => <HardSkill
+                        {props.content.hardSkills.map((item: { spriteName: string, skillTitle: string }) => <HardSkill
                             iconId={item.spriteName}
                             title={item.skillTitle}/>)}
                     </FlexWrapper>
                 </SkillWrapper>
                 <SkillWrapper>
-                    <SectionTitle>{props.content.mySoftSkills}</SectionTitle>
+                    <SectionTitle>{props.content.sectionTitle_soft}</SectionTitle>
                     <FlexWrapper direction={'column'} gap={'25px'}>
-                        {props.softSkills.map((item: { skillTitle: string, skillProgress: string }) => <SoftSkill
-                            title={item.skillTitle}
-                            progress={item.skillProgress}/>)}
+                        {props.content.softSkills.map((item: { skillTitle: string, skillProgress: string }) =>
+                            <SoftSkill
+                                title={item.skillTitle}
+                                progress={item.skillProgress}/>)}
                     </FlexWrapper>
                 </SkillWrapper>
             </Container>

@@ -12,13 +12,12 @@ import {currentLang} from "./State";
 function App() {
     return (
         <div className="App">
-            <Header navMenu={(state as any)[currentLang].navMenu} ru={callBacks.changeLangToRU}
+            <Header menuItems={(state as any)[currentLang].menuItems} ru={callBacks.changeLangToRU}
                     en={callBacks.changeLangToEN}/>
             <Main content={(state as any)[currentLang].main}/>
-            <Skills content={(state as any)[currentLang].skills} hardSkills={(state as any)[currentLang].hardSkills}
-                    softSkills={(state as any)[currentLang].softSkills}/>
+            <Skills content={(state as any)[currentLang].skills}/>
             <Works content={(state as any)[currentLang].works}/>
-            <Footer SocialIcons={(state as any)[currentLang].SocialIcons}/>
+            <Footer content={(state as any)[currentLang].footer}/>
         </div>
     );
 }

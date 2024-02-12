@@ -4,13 +4,13 @@ import {Icon} from "../../components/icon/Icon";
 import {FlexWrapper} from "../../components/FlexWrapper";
 
 
-export const Footer = (props: { SocialIcons: Array<string> }) => {
+export const Footer = (props: any) => {
     return (
         <StyledFooter>
             <FlexWrapper justify={'space-evenly'} align={'center'}>
-                <Copyright>Made by Denis Krestov - Copyright 2024</Copyright>
+                <Copyright>{props.content.copyright}</Copyright>
                 <SocialList>
-                    {props.SocialIcons.map((item, index) => {
+                    {props.content.socialIcons.map((item: string, index: React.Key | null | undefined) => {
                             return (
                                 <SocialItem key={index}>
                                     <SocialLink>
@@ -49,7 +49,7 @@ const SocialList = styled.ul`
     gap: 30px;
 `
 const SocialItem = styled.li`
-  
+
 `
 const SocialLink = styled.a`
     background-color: #363636;
