@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import {log} from "node:util";
 
 
 export const HeaderMenu = (props: { menuItems: Array<string> }) => {
@@ -50,7 +49,7 @@ const Mask = styled.span`
 
 const StyledHeaderMenu = styled.nav`
     background-color: rgba(31, 31, 31, 0.7);
-
+    backdrop-filter: blur(10px);
     position: fixed;
     left: 0;
     top: 0;

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import iconsSprite from "../../../../assets/images/sprite.svg";
 
 
 type WorkPropsType = {
@@ -26,7 +25,10 @@ const StyledWork = styled.div`
     width: 100%;
     display: grid;
     justify-items: center;
-    border: 5px solid #127BC3;
+    //border: 5px solid #127BC3;
+    border-width: 5px;
+    border-style: solid;
+    border-image: linear-gradient(-135deg, #5d5963, #a3adb2) 1;
 
 `
 
@@ -34,6 +36,7 @@ const Image = styled.img`
     width: 100%;
     height: 276px;
     object-fit: cover;
+    filter: sepia(0.5);
 `
 
 const Text = styled.p`

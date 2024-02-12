@@ -14,7 +14,7 @@ export const Footer = (props: { SocialIcons: Array<string> }) => {
                             return (
                                 <SocialItem key={index}>
                                     <SocialLink>
-                                        <Icon iconId={item} width={'35'} height={'35'} viewBox={'0 0 35 35'}/>
+                                        <Icon iconId={item} width={'17px'} height={'17px'} viewBox={'0 0 17px 17px'}/>
                                     </SocialLink>
                                 </SocialItem>
                             )
@@ -49,12 +49,25 @@ const SocialList = styled.ul`
     gap: 30px;
 `
 const SocialItem = styled.li`
-    &:hover {
-        transform: scale(1.2);
-    }
+  
 `
 const SocialLink = styled.a`
+    background-color: #363636;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #7471d4;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #7471d4;
+        color: #363636;
+    }
 `
 const Copyright = styled.small`
     color: rgb(158, 158, 158);

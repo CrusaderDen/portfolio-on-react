@@ -188,8 +188,6 @@ export const Works = () => {
                     <FlexWrapper justify={'center'}>
                         <Gallery/>
                     </FlexWrapper>
-                    {/*<SliderButtonLeft><img src={arrowLeft} alt=""/></SliderButtonLeft>*/}
-                    {/*<SliderButtonRight><img src={arrowLeft} alt=""/></SliderButtonRight>*/}
                 </CardBox>
             </Container>
             <ContactBox>
@@ -244,7 +242,7 @@ const SliderButtonLeft = styled.div`
 
 const SliderButtonRight = styled(SliderButtonLeft)`
     left: unset;
-    right: -100px;
+    right: -72px;
     transform: rotate(180deg) translateY(50%);
 `
 
