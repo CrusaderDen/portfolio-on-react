@@ -149,6 +149,8 @@ const ListItem = styled.li`
 `
 
 const ButtonRU = styled.div`
+    user-select: none;
+    cursor: pointer;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -171,6 +173,8 @@ const ButtonRU = styled.div`
     }
 `
 const ButtonEn = styled.div`
+    user-select: none;
+    cursor: pointer;
     width: 30px;
     height: 30px;
     border-radius: 50%;

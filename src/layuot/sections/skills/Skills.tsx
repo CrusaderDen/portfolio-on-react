@@ -38,6 +38,7 @@ export const Skills = (props: any) => {
 };
 
 const StyledSkills = styled.section`
+    //padding-top: 10dvh;
     padding-bottom: 50px;
 
     ${SectionTitle} {
