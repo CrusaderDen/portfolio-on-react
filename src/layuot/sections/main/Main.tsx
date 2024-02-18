@@ -25,8 +25,7 @@ export const Main = (props: any) => {
                                 }}
                             />
                         </MainTitle>
-                        <ButtonCV
-                            onClick={() => alert('Пока нет CV, сорян :)')}>{props.content.buttonCV_Content}</ButtonCV>
+                        <ButtonCV>{props.content.buttonCV_Content}</ButtonCV>
                     </MainContentBlock>
                     <PhotoWrapper>
                         <StyledPhoto src={mainPhoto} alt={'my photo'}/>

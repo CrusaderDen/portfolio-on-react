@@ -44,6 +44,7 @@ const Image = styled.img`
     width: 100%;
     height: 276px;
     object-fit: cover;
+        // border-bottom: 1px solid ${theme.colors.inactivity};
     //filter: sepia(0.5);
 `
 
@@ -58,6 +59,8 @@ const Link = styled.a`
     padding: 14px 16px;
     height: 56px;
     background: ${theme.colors.accentBG_Vertical};
+    color: ${theme.colors.accentFont};
+    font-weight: 500;
     //border: 2px solid rgb(255, 255, 255);
     border-radius: 4px;
     //margin-bottom: 12px;

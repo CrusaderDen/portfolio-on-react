@@ -22,7 +22,7 @@ export const Works = (props: any) => {
                 <FlexWrapper direction={'column'} justify={'center'} align={'center'}>
                     <SectionTitle>{props.content.sectionTitle_2}</SectionTitle>
                     <StyledSpan>{props.content.styledSpanContent}</StyledSpan>
-                    <ButtonCV onClick={() => alert('Пока нет CV, сорян :)')}>{props.content.buttonCV_Content}</ButtonCV>
+                    <ButtonCV>{props.content.buttonCV_Content}</ButtonCV>
                 </FlexWrapper>
             </ContactBox>
 
@@ -33,7 +33,7 @@ export const Works = (props: any) => {
 
 
 const CardBox = styled.div`
-    margin-bottom: 75px;
+    margin-bottom: 150px;
     position: relative;
     width: 100%;
 `

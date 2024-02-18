@@ -1,8 +1,13 @@
 import styled from "styled-components";
 import {theme} from "../styles/Theme";
+// @ts-ignore
+import CV from './../assets/CV.doc';
 
 
-export const ButtonCV = styled.button`
+export const ButtonCV = styled.a.attrs(() => ({
+    href: CV,
+    target: '_blank'
+}))`
     font-size: 25px;
     padding: 17px 47px;
     border-radius: 10px;
@@ -11,7 +16,6 @@ export const ButtonCV = styled.button`
     color: ${theme.colors.accentFont};
     transition: all 0.5s;
     cursor: pointer;
-
     //position: relative;
     //left: -2px;
 
