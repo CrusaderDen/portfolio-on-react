@@ -38,8 +38,8 @@ export const Skills = (props: any) => {
 };
 
 const StyledSkills = styled.section`
-    //padding-top: 10dvh;
-    padding-bottom: 50px;
+    padding-top: 90px;
+    margin-bottom: 100px;
 
     ${SectionTitle} {
         margin-left: 50px;
@@ -47,5 +47,7 @@ const StyledSkills = styled.section`
 
 `
 const SkillWrapper = styled.div`
-    margin-bottom: 50px;
+    &:not(:last-child) {
+        margin-bottom: 100px;
+    }
 `

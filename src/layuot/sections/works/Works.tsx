@@ -40,6 +40,7 @@ const CardBox = styled.div`
 
 
 const WorksStyled = styled.section`
+    padding-top: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,6 +54,7 @@ const StyledSpan = styled.span`
 
 
 const ContactBox = styled.div`
+
     ${SectionTitle} {
         margin: 0;
     }

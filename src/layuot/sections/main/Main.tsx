@@ -63,12 +63,13 @@ const MainContentBlock = styled.div`
 
 
 const StyledMain = styled.section`
+    padding-top: 60px;
     min-height: 100dvh;
     display: flex;
 `
 
 const StyledPhoto = styled.img`
-
+    display: block;
 `
 const MainTitle = styled.h1`
     color: white;

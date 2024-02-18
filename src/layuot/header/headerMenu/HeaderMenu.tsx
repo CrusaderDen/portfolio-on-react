@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {theme} from "../../../styles/Theme";
 
 
 export const HeaderMenu = (props: {
@@ -119,7 +120,8 @@ const ListItem = styled.li`
         content: '';
         display: inline-block;
         height: 1px;
-        background-color: #16c447;
+        background: ${theme.colors.accentBG_Vertical};
+        //background-color: #16c447;
         position: absolute;
         top: 50%;
         left: -5px;
@@ -154,48 +156,28 @@ const ButtonRU = styled.div`
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #787871;
+    //background-color: #787871;
+    background: ${theme.colors.inactivity};
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    color: black;
+    color: ${theme.colors.accentFont};
     font-weight: 700;
     transition: all 0.3s ease;
 
     &:hover {
-        background-color: #FF8C00FF;
+        //background-color: #FF8C00FF;
+        background: ${theme.colors.accentBG_Vertical};
     }
 
     &.active {
-        background-color: #FF8C00FF;
+        //background-color: #FF8C00FF;
+        background: ${theme.colors.accentBG_Vertical};
     }
 `
-const ButtonEn = styled.div`
-    user-select: none;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #787871;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: black;
-    font-weight: 700;
-    transition: all 0.3s ease;
-
-    &:hover {
-        background-color: #FF8C00FF;
-    }
-
-    &.active {
-        background-color: #FF8C00FF;
-    }
-`
+const ButtonEn = styled(ButtonRU)``
 
 const LanguageButtons = styled.div`
     position: fixed;

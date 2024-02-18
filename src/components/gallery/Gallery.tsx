@@ -10,6 +10,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import arrowLeft from "../../assets/images/arrow_left.svg";
 import React from "react";
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 
 const responsive = {
@@ -84,13 +85,16 @@ const SliderButtonLeft = styled.div`
         width: 80px;
         height: 80px;
         border-radius: 50%;
-        background-color: goldenrod;
+        //background-color: goldenrod;
+        background: transparent;
         transition: all 0.5s ease;
     }
 
     &:hover {
         &::before {
-            box-shadow: 0 0 15px 15px rgba(218, 165, 32, 0.5);
+            box-shadow: 0 0 2px 3px ${theme.colors.inactivity};
+            //box-shadow: 0 0 15px 15px rgba(218, 165, 32, 0.5);
+
         }
     }
 
@@ -100,5 +104,8 @@ const SliderButtonLeft = styled.div`
 const SliderButtonRight = styled(SliderButtonLeft)`
     left: unset;
     right: -72px;
-    transform: rotate(180deg) translateY(50%);
+
+    img {
+        transform: rotate(180deg);
+    }
 `

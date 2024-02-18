@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {theme} from "../../../../styles/Theme";
 
 
 export const Work = (props: any) => {
@@ -16,15 +17,17 @@ export const Work = (props: any) => {
 
 const StyledWork = styled.div`
     user-select: none;
-    background-color: red;
+    background-color: transparent;
     max-width: 372px;
     //min-height: 465px;
     width: 100%;
 
 
-    border-width: 5px;
-    border-style: solid;
-    border-image: linear-gradient(-135deg, #5d5963, #a3adb2) 1;
+    //border-width: 5px;
+    //border-style: solid;
+    //border-image: linear-gradient(-135deg, #5d5963, #a3adb2) 1;
+    border: 5px solid ${theme.colors.inactivity};
+
 
 `
 const Wrapper = styled.div`
@@ -41,7 +44,7 @@ const Image = styled.img`
     width: 100%;
     height: 276px;
     object-fit: cover;
-    filter: sepia(0.5);
+    //filter: sepia(0.5);
 `
 
 const Text = styled.p`
@@ -54,8 +57,8 @@ const Link = styled.a`
     display: inline-block;
     padding: 14px 16px;
     height: 56px;
-    background: transparent;
-    border: 2px solid rgb(255, 255, 255);
+    background: ${theme.colors.accentBG_Vertical};
+    //border: 2px solid rgb(255, 255, 255);
     border-radius: 4px;
     //margin-bottom: 12px;
     transition: all 0.5s;

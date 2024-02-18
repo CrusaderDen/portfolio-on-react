@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon";
 import {FlexWrapper} from "../../components/FlexWrapper";
+import {theme} from "../../styles/Theme";
 
 
 export const Footer = (props: any) => {
@@ -59,7 +60,6 @@ const SocialItem = styled.li`
 
 `
 const SocialLink = styled.a`
-    background-color: #363636;
     border-radius: 50%;
     width: 35px;
     height: 35px;
@@ -68,12 +68,16 @@ const SocialLink = styled.a`
     justify-content: center;
     align-items: center;
 
-    color: #7471d4;
+    background-color: #363636;
+    //color: #7471d4;
+    color: ${theme.colors.inactivity};
     transition: all 0.3s ease;
 
     &:hover {
-        background-color: #7471d4;
-        color: #363636;
+        background: ${theme.colors.accentBG_Vertical};
+        color: ${theme.colors.accentFont};
+        //background-color: #7471d4;
+        //color: #363636;
     }
 `
 const Copyright = styled.small`
