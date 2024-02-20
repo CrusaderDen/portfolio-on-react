@@ -49,6 +49,22 @@ export const HeaderMenu = (props: {
 };
 
 
+const StyledHeaderMenu = styled.nav`
+
+
+    ul {
+        display: flex;
+        gap: 70px;
+    }
+
+
+    @media ${theme.media.tablet} {
+        display: none;
+    }
+
+`
+
+
 const Mask = styled.span`
     position: absolute;
     top: 0;
@@ -73,37 +89,6 @@ const Mask = styled.span`
     }
 `
 
-const StyledHeaderMenu = styled.nav`
-    background-color: rgba(31, 31, 31, 0.7);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 60px;
-    width: 100%;
-
-    z-index: 2;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    ul {
-        display: flex;
-        gap: 70px;
-    }
-
-    &::before {
-        content: '';
-        width: 90vw;
-        height: 1px;
-        background-color: rgb(152, 152, 152);
-
-        position: absolute;
-        bottom: 0;
-    }
-
-`
 
 const Link = styled.a`
     font-size: 28px;
@@ -150,6 +135,15 @@ const ListItem = styled.li`
 }
 `
 
+const LanguageButtons = styled.div`
+    position: fixed;
+    right: 5%;
+    top: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 20px;
+`
+
 const ButtonRU = styled.div`
     user-select: none;
     cursor: pointer;
@@ -179,9 +173,4 @@ const ButtonRU = styled.div`
 `
 const ButtonEn = styled(ButtonRU)``
 
-const LanguageButtons = styled.div`
-    position: fixed;
-    left: 90%;
-    display: flex;
-    gap: 20px;
-`
+

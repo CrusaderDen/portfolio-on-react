@@ -23,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
         color: ${theme.colors.primaryFont};
         background-color: ${theme.colors.primaryBg};
         line-height: 1.2;
+
     }
 
     code {
@@ -43,6 +44,5 @@ export const GlobalStyle = createGlobalStyle`
         background-color: unset;
         border: none;
     }
-
-
+    
 `

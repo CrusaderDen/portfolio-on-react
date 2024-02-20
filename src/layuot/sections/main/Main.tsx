@@ -5,12 +5,13 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import {ButtonCV} from "../../../components/ButtonCV";
 import Typewriter from 'typewriter-effect';
+import {theme} from "../../../styles/Theme";
 
 export const Main = (props: any) => {
     return (
         <StyledMain id={'section0'}>
             <Container>
-                <FlexWrapper justify={'space-between'} align={'center'}>
+                <MainFlexWrapper>
                     <MainContentBlock>
                         <StyledSpan>{props.content.styledSpanContent}</StyledSpan>
                         <Name>{props.content.nameContent}</Name>
@@ -21,7 +22,8 @@ export const Main = (props: any) => {
                                     strings: [props.content.typewriterContent_1, props.content.typewriterContent_2],
                                     autoStart: true,
                                     loop: true,
-                                    delay: 50
+                                    delay: 50,
+                                    wrapperClassName: 'typer'
                                 }}
                             />
                         </MainTitle>
@@ -30,15 +32,33 @@ export const Main = (props: any) => {
                     <PhotoWrapper>
                         <StyledPhoto src={mainPhoto} alt={'my photo'}/>
                     </PhotoWrapper>
-                </FlexWrapper>
+                </MainFlexWrapper>
             </Container>
         </StyledMain>
     );
 };
 
+
+const MainFlexWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 100dvh;
+
+    @media ${theme.media.littleScreen} {
+        //justify-content: space-evenly;
+    }
+    @media ${theme.media.tablet} {
+        flex-direction: column;
+    }
+`
+
+
 const PhotoWrapper = styled.div`
     position: relative;
     z-index: 0;
+    padding: 0 10px;
 
     &::before {
         content: '';
@@ -52,12 +72,28 @@ const PhotoWrapper = styled.div`
         right: -40px;
 
         z-index: -1;
+
+
+        @media ${theme.media.littleScreen} {
+            display: none;
+        }
     }
+
+    @media ${theme.media.littleScreen} {
+        transform: scale(0.7);
+    }
+
 `
 
 
 const MainContentBlock = styled.div`
     max-width: 400px;
+
+    @media ${theme.media.tablet} {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 
@@ -72,7 +108,7 @@ const StyledPhoto = styled.img`
 `
 const MainTitle = styled.h1`
     color: white;
-    font-size: 20px;
+    //font-size: 20px;
     font-weight: 300;
     line-height: 30px;
     text-transform: uppercase;
@@ -81,14 +117,19 @@ const MainTitle = styled.h1`
     p {
         display: none;
     }
+
 `
 const Name = styled.h2`
     color: white;
-    font-size: 67px;
+    //font-size: 67px;
     font-weight: 600;
-    line-height: 101px;
-    //text-shadow: 5px 5px 5px #1a5ded;
+    line-height: 1.5;
+    font-size: calc((100vw - 900px) / (1920 - 900) * (67 - 35) + 35px);
 
+    @media ${theme.media.tablet} {
+        text-align: center;
+        font-size: 67px;
+    }
 
 `
 const StyledSpan = styled.span`
