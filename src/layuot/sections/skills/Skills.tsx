@@ -55,6 +55,9 @@ const StyledSkills = styled.section`
 
     ${SectionTitle} {
         margin-left: 50px;
+        @media ${theme.media.mobile} {
+            margin-left: 0;
+        }
     }
 
     @media ${theme.media.mobile} {

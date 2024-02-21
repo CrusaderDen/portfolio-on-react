@@ -27,7 +27,7 @@ const SoftSkillWrapper = styled.div`
 
 
 const SkillTitle = styled.h3`
-    font-size: 26px;
+    font-size: calc((100vw - 360px) / (1920 - 360) * (26 - 18) + 18px);
     margin-left: 10px;
     margin-bottom: 5px;
 `

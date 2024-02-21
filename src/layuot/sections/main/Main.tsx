@@ -71,11 +71,10 @@ const MainFlexWrapper = styled.div`
 const PhotoWrapper = styled.div`
     position: relative;
     z-index: 0;
-    padding: 0 10px;
+    padding: 70px 10px;
 
     &::before {
         content: '';
-
         width: 596px;
         height: 658px;
         background: rgb(90, 108, 108);
@@ -93,7 +92,7 @@ const PhotoWrapper = styled.div`
     }
 
     @media ${theme.media.littleScreen} {
-        transform: scale(0.7);
+        //transform: scale(0.7);
     }
 
 
@@ -114,8 +113,10 @@ const MainContentBlock = styled.div`
 const StyledPhoto = styled.img`
     display: block;
     @media ${theme.media.mobile} {
-        width: calc(596px / 1.7);
-        height: calc(658px / 1.7);
+        //width: calc(596px / 1.7);
+        //height: calc(658px / 1.7);  
+        width: 100%;
+        height: auto;
     }
 `
 
@@ -142,7 +143,7 @@ const Name = styled.h2`
 
     @media ${theme.media.tablet} {
         text-align: center;
-        font-size: 67px;
+        font-size: 42px;
     }
 
 `

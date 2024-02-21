@@ -31,6 +31,11 @@ const StyledHeader = styled.header`
     justify-content: center;
     align-items: center;
 
+    @media ${theme.media.tablet} {
+        backdrop-filter: none;
+        background-color: transparent;
+    };
+
 
     &::before {
         content: '';

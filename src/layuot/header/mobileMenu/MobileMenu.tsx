@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
 
@@ -30,14 +30,20 @@ export const MobileMenu = (props: {
     const onBurgerBtnClick = () => {
         setmenuIsOpen(!menuIsOpen)
     }
-
+    useEffect(() => {
+        if (menuIsOpen) {
+            document.body.style.overflowY = 'hidden'
+        } else {
+            document.body.style.overflowY = 'visible'
+        }
+    }, [menuIsOpen])
 
     return (
         <StyledMobileMenu>
             <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
                 <span></span>
             </BurgerButton>
-            <MobileMenuOverlay isOpen={menuIsOpen}>
+            <MobileMenuOverlay isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
                 <ul>
                     {props.menuItems.map((item, index) => <ListItem key={index}>
                         <Link href={`#section${index}`}>
@@ -64,7 +70,9 @@ const StyledMobileMenu = styled.nav`
 `
 
 const MobileMenuOverlay = styled.div<{ isOpen: boolean }>`
-    display: none;
+    //display: none;
+    transform: translate(100%);
+    transition: all 0.5s ease-in-out;
     position: fixed;
     background-color: black;
     top: 0;
@@ -76,7 +84,8 @@ const MobileMenuOverlay = styled.div<{ isOpen: boolean }>`
 
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
-        display: block;
+        //display: block;
+        transform: translateX(0%);
         overflow: hidden;
     `}
     ul {

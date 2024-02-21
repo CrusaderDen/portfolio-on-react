@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        min-width: 360px;
+        min-width: 390px;
         margin: 0;
         font-family: 'Poppins', sans-serif;
         -webkit-font-smoothing: antialiased;
