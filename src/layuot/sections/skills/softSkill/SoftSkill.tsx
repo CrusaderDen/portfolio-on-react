@@ -11,14 +11,19 @@ type SoftSkillPropsType = {
 
 export const SoftSkill = (props: SoftSkillPropsType) => {
     return (
-        <div>
+        <SoftSkillWrapper>
             <SkillTitle>{props.title}</SkillTitle>
             <SkillBar>
                 <ProgressBar progress={props.progress}/>
             </SkillBar>
-        </div>
+        </SoftSkillWrapper>
     );
 };
+
+const SoftSkillWrapper = styled.div`
+    margin: 0 auto;
+    width: 90%;
+`
 
 
 const SkillTitle = styled.h3`
@@ -32,14 +37,14 @@ const SkillBar = styled.div`
     height: 18px;
     border-radius: 9px;
     //background-color: rgb(22, 41, 80);
-    background-color: ${theme.colors.inactivity};
+    background-color: #323232;
 `
 
 const ProgressBar = styled.div<SoftSkillPropsType>`
     width: ${props => props.progress};
     height: 18px;
     border-radius: 9px;
-    box-shadow: 5px 0 12px #2644d1;
+    //box-shadow: 5px 0 12px #2644d1;
     //background: linear-gradient(270.00deg, rgb(19, 173, 199), rgb(105, 120, 209) 66.667%, rgb(148, 93, 214) 100%);
     background: ${theme.colors.accentBG_Horizontal};
 `
