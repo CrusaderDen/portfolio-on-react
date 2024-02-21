@@ -11,14 +11,15 @@ type SoftSkillPropsType = {
 
 export const SoftSkill = (props: SoftSkillPropsType) => {
     return (
-        <FlexWrapper direction={'column'}>
+        <div>
             <SkillTitle>{props.title}</SkillTitle>
             <SkillBar>
                 <ProgressBar progress={props.progress}/>
             </SkillBar>
-        </FlexWrapper>
+        </div>
     );
 };
+
 
 const SkillTitle = styled.h3`
     font-size: 26px;

@@ -5,6 +5,7 @@ import {SectionTitle} from "../../../components/SectonTitle";
 import {HardSkill} from "./hardSkill/hardSkill";
 import {SoftSkill} from "./softSkill/SoftSkill";
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
 
 // type SkillsPropsType = {
 //     hardSkills: { spriteName: string, skillTitle: string }[]
@@ -17,11 +18,11 @@ export const Skills = (props: any) => {
             <Container>
                 <SkillWrapper>
                     <SectionTitle>{props.content.sectionTitle_hard}</SectionTitle>
-                    <FlexWrapper justify={'space-between'}>
+                    <HardSkillWrapper>
                         {props.content.hardSkills.map((item: { spriteName: string, skillTitle: string }) => <HardSkill
                             iconId={item.spriteName}
                             title={item.skillTitle}/>)}
-                    </FlexWrapper>
+                    </HardSkillWrapper>
                 </SkillWrapper>
                 <SkillWrapper>
                     <SectionTitle>{props.content.sectionTitle_soft}</SectionTitle>
@@ -37,12 +38,27 @@ export const Skills = (props: any) => {
     );
 };
 
+const HardSkillWrapper = styled.div`
+    //display: flex;
+    //flex-wrap: wrap;
+    //row-gap: 30px;
+    //justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    row-gap: 30px;
+`
+
+
 const StyledSkills = styled.section`
     padding-top: 90px;
     margin-bottom: 100px;
 
     ${SectionTitle} {
         margin-left: 50px;
+    }
+
+    @media ${theme.media.mobile} {
+        padding-top: 0;
     }
 
 `

@@ -9,7 +9,7 @@ export const Footer = (props: any) => {
 
     return (
         <StyledFooter>
-            <FlexWrapper justify={'space-evenly'} align={'center'}>
+            <FooterFlexWrapper>
                 <Copyright>{props.content.copyright}</Copyright>
                 <SocialList>
                     <SocialItem>
@@ -29,10 +29,22 @@ export const Footer = (props: any) => {
                     </SocialItem>
 
                 </SocialList>
-            </FlexWrapper>
+            </FooterFlexWrapper>
         </StyledFooter>
     );
 };
+
+const FooterFlexWrapper = styled.div`
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+
+    @media ${theme.media.tablet} {
+        flex-direction: column;
+    }
+`
 
 
 const StyledFooter = styled.footer`
@@ -84,5 +96,7 @@ const Copyright = styled.small`
     color: rgb(158, 158, 158);
     font-size: 18px;
     text-transform: capitalize;
-
+    @media ${theme.media.mobile} {
+        font-size: 14px;
+    }
 `

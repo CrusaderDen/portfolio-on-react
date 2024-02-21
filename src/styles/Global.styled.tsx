@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        min-width: 360px;
         margin: 0;
         font-family: 'Poppins', sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -44,5 +45,5 @@ export const GlobalStyle = createGlobalStyle`
         background-color: unset;
         border: none;
     }
-    
+
 `

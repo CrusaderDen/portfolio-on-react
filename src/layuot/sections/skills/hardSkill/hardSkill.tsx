@@ -19,10 +19,9 @@ export const HardSkill = (props: HardSkillPropsType) => {
 
 const StyledSkill = styled.div`
     display: flex;
-    flex-direction: column;
+    //width: 150px;
+    flex-flow: column;
     align-items: center;
-    justify-content: flex-start;
-
 `
 
 const SkillTitle = styled.h3`

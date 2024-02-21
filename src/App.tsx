@@ -15,9 +15,9 @@ function App() {
             <Header menuItems={(state as any)[currentLang].menuItems} ru={callBacks.changeLangToRU}
                     en={callBacks.changeLangToEN}/>
             <Main content={(state as any)[currentLang].main}/>
-            {/*<Skills content={(state as any)[currentLang].skills}/>*/}
-            {/*<Works content={(state as any)[currentLang].works}/>*/}
-            {/*<Footer content={(state as any)[currentLang].footer}/>*/}
+            <Skills content={(state as any)[currentLang].skills}/>
+            <Works content={(state as any)[currentLang].works}/>
+            <Footer content={(state as any)[currentLang].footer}/>
         </div>
     );
 }

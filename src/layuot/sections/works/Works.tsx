@@ -45,6 +45,7 @@ const WorksStyled = styled.section`
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+    overflow: hidden;
 `
 
 const StyledSpan = styled.span`

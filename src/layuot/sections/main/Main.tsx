@@ -39,18 +39,31 @@ export const Main = (props: any) => {
 };
 
 
+const StyledMain = styled.section`
+    padding-top: 60px;
+    min-height: 100dvh;
+    display: flex;
+
+    @media ${theme.media.mobile} {
+        min-height: auto;
+    }
+`
+
 const MainFlexWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    min-height: 100dvh;
+    min-height: 100%;
 
     @media ${theme.media.littleScreen} {
         //justify-content: space-evenly;
     }
     @media ${theme.media.tablet} {
         flex-direction: column;
+    }
+    @media ${theme.media.mobile} {
+        min-height: auto;
     }
 `
 
@@ -83,6 +96,7 @@ const PhotoWrapper = styled.div`
         transform: scale(0.7);
     }
 
+
 `
 
 
@@ -97,15 +111,15 @@ const MainContentBlock = styled.div`
 `
 
 
-const StyledMain = styled.section`
-    padding-top: 60px;
-    min-height: 100dvh;
-    display: flex;
-`
-
 const StyledPhoto = styled.img`
     display: block;
+    @media ${theme.media.mobile} {
+        width: calc(596px / 1.7);
+        height: calc(658px / 1.7);
+    }
 `
+
+
 const MainTitle = styled.h1`
     color: white;
     //font-size: 20px;
