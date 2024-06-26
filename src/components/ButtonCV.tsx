@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {theme} from "../styles/Theme";
 // @ts-ignore
-import CV from './../assets/CV.doc';
+import CV from './../assets/CV.pdf';
 
 
 export const ButtonCV = styled.a.attrs(() => ({

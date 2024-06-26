@@ -1,7 +1,6 @@
 import React from 'react';
-import mainPhoto from './../../../assets/images/tempPhoto.jpeg';
+import mainPhoto from './../../../assets/images/Photo.png';
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import {ButtonCV} from "../../../components/ButtonCV";
 import Typewriter from 'typewriter-effect';
@@ -80,8 +79,8 @@ const PhotoWrapper = styled.div`
         background: rgb(90, 108, 108);
 
         position: absolute;
-        top: -40px;
-        right: -40px;
+        top: 40px;
+        right: -30px;
 
         z-index: -1;
 

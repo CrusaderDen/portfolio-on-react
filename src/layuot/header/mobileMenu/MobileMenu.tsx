@@ -32,9 +32,22 @@ export const MobileMenu = (props: {
     }
     useEffect(() => {
         if (menuIsOpen) {
+            document.documentElement.style.overflowY = 'hidden'
             document.body.style.overflowY = 'hidden'
+            document.documentElement.style.position = 'relative'
+            document.body.style.position = 'relative'
+            document.documentElement.style.height = '100%'
+            document.body.style.height = '100%'
+
+
         } else {
             document.body.style.overflowY = 'visible'
+            document.documentElement.style.overflowY = 'visible'
+            document.body.style.overflowY = 'visible'
+            document.documentElement.style.position = 'static'
+            document.body.style.position = 'static'
+            document.documentElement.style.height = 'auto'
+            document.body.style.height = 'auto'
         }
     }, [menuIsOpen])
 

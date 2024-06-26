@@ -22,11 +22,11 @@ export const Footer = (props: any) => {
                             <Icon iconId={'vk'} width={'17px'} height={'14px'} viewBox={'0 0 17px 17px'}/>
                         </SocialLink>
                     </SocialItem>
-                    <SocialItem>
-                        <SocialLink href={props.content.socialLinks.linkedInLink}>
-                            <Icon iconId={'linkedIn'} width={'17px'} height={'17px'} viewBox={'0 0 17px 17px'}/>
-                        </SocialLink>
-                    </SocialItem>
+                    {/*<SocialItem>*/}
+                    {/*    <SocialLink href={props.content.socialLinks.linkedInLink}>*/}
+                    {/*        <Icon iconId={'linkedIn'} width={'17px'} height={'17px'} viewBox={'0 0 17px 17px'}/>*/}
+                    {/*    </SocialLink>*/}
+                    {/*</SocialItem>*/}
 
                 </SocialList>
             </FooterFlexWrapper>

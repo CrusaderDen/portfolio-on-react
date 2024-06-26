@@ -1,6 +1,5 @@
 import {Work} from "../../layuot/sections/works/work/Work";
 import project_card_1 from "../../assets/images/project-card-1.webp";
-import project_card_2 from "../../assets/images/project-card-2.webp";
 import project_card_3 from "../../assets/images/project-card-3.webp";
 import project_card_4 from "../../assets/images/project-card-4.webp";
 import project_card_5 from "../../assets/images/project-card-5.webp";
@@ -28,8 +27,6 @@ export const Gallery = (props: any) => {
     const items = [
         <Work src={project_card_1} text={props.content.card_1_Content}
               targetLink={'https://sweet37.ru/'} buttonContent={props.content.buttonCard_Content}/>,
-        <Work src={project_card_2} text={props.content.card_2_Content}
-              targetLink={'https://cyberpunk.ivrupo.ru/'} buttonContent={props.content.buttonCard_Content}/>,
         <Work src={project_card_3} text={props.content.card_3_Content}
               targetLink={'https://castaway.ivrupo.ru/'} buttonContent={props.content.buttonCard_Content}/>,
         <Work src={project_card_4}
@@ -38,8 +35,7 @@ export const Gallery = (props: any) => {
               buttonContent={props.content.buttonCard_Content}/>,
         <Work src={project_card_5} text={props.content.card_5_Content}
               targetLink={'https://balloons.ivrupo.ru/'} buttonContent={props.content.buttonCard_Content}/>,
-        <Work src={project_card_6} text={props.content.card_6_Content}
-              targetLink={'https://bank.ivrupo.ru/'} buttonContent={props.content.buttonCard_Content}/>,
+
     ]
     return (
         <AliceCarousel
